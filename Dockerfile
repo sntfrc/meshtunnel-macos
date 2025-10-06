@@ -4,7 +4,8 @@ FROM ubuntu:24.04
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     python3 python3-venv python3-pip \
     socat net-tools iproute2 iputils-ping \
- && rm -rf /var/lib/apt/lists/*
+    traceroute bind9-dnsutils tcpdump \
+    netcat-traditional telnet
 
 # Pre-create venv and install Python deps
 RUN python3 -m venv /opt/meshtastic \
