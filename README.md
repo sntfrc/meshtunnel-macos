@@ -15,5 +15,5 @@ Then when you want to get into the container, just ./run.sh .
 git clone https://github.com/sntfrc/meshtunnel-macos.git
 cd meshtunnel-macos
 ./prepare.sh
-./run.sh
+./run.sh /dev/tty.usbmodemxxx
 ```
